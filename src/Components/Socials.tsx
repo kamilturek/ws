@@ -1,4 +1,5 @@
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import Card from './Card/Card';
+import { AiFillGithub, AiFillLinkedin, AiFillMail } from 'react-icons/ai';
 import styled from 'styled-components';
 
 const Row = styled.div`
@@ -9,8 +10,15 @@ const Row = styled.div`
 
 const Socials: React.FC = () => (
   <Row>
-    <AiFillGithub size={50} />
-    <AiFillLinkedin size={50} />
+    <Card link='https://github.com/kamilturek'>
+      <AiFillGithub size={50} />
+    </Card>
+    <Card link='https://www.linkedin.com/in/kamilturek/'>
+      <AiFillLinkedin size={50} />
+    </Card>
+    <Card link='mailto:kontakt@kamilturek.it'>
+      <AiFillMail size={50} />
+    </Card>
   </Row>
 );
 
