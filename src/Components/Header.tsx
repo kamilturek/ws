@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Trail from '../Trail/Trail';
+import Trail from './Trail/Trail';
 
 const Header: React.FC = () => {
   const [open, setOpen] = useState(false);

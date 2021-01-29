@@ -1,4 +1,4 @@
-import Header from './Components/Header/Header';
+import Header from './Components/Header';
 import Socials from './Components/Socials';
 import './App.css';
 import styled from 'styled-components';
