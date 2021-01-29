@@ -1,5 +1,7 @@
 name: Deployment
-on: [push]
+on:
+  release:
+    types: [published]
 
 jobs:
   deploy:
@@ -11,5 +13,9 @@ jobs:
         with:
           python-version: 3.9
       - name: Run deployment
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         run: |
-          python deploy.py
+          python bin/deploy.py
