@@ -6,6 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Set up Node.js 14
+        uses: actions/setup-node@v2
+        with:
+          node-versions: 14
+      - name: Build
+        env:
+          PUBLIC_URL: "."
+        run: npm run build
       - name: Set up Python 3.9
         uses: actions/setup-python@v2
         with:
